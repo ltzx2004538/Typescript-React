@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import Home from './Pages/Home/';
+import {ContextExample} from './components/ContextExample';
+import styles from './App.less';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App: React.FC = () => {
+
+	return (
+		<Router>
+			<div>
+				<nav>
+					<ul className= {styles['homepage-navigation']}>
+						<li>
+							<Link to='/'>Home</Link>
+						</li>
+						<li>
+							<Link to='/context/'>Context Example</Link>
+						</li>
+						{/* <li>
+							<Link to='/hooks/'>Hooks Example</Link>
+						</li> */}
+					</ul>
+				</nav>
+
+				<Route path='/' exact component={Home} />
+				<Route path='/context' component={ContextExample} />
+			</div>
+		</Router>
+	);
 }
 
 export default App;
+
+
