@@ -535,19 +535,6 @@ module.exports = function (webpackEnv) {
               ),
             },
             {
-              test: sassModuleRegex,
-              use: getStyleLoaders(
-                {
-                  importLoaders: 3,
-                  sourceMap: isEnvProduction && shouldUseSourceMap,
-                  modules: {
-                    getLocalIdent: getCSSModuleLocalIdent,
-                  },
-                },
-                'sass-loader'
-              ),
-            },
-            {
               test: /\.less$/,
               use: getStyleLoaders(
                 {
