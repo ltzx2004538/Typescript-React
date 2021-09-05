@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Home from './Pages/Home/';
 import {ContextExample} from './components/ContextExample';
-import styles from './App.less';
+import { HoosExample } from './components/HooksExample';
 
 const App: React.FC = () => {
 
@@ -10,21 +10,22 @@ const App: React.FC = () => {
 		<Router>
 			<div>
 				<nav>
-					<ul className= {styles['homepage-navigation']}>
+					<ul>
 						<li>
 							<Link to='/'>Home</Link>
 						</li>
 						<li>
 							<Link to='/context/'>Context Example</Link>
 						</li>
-						{/* <li>
+						<li>
 							<Link to='/hooks/'>Hooks Example</Link>
-						</li> */}
+						</li>
 					</ul>
 				</nav>
 
 				<Route path='/' exact component={Home} />
 				<Route path='/context' component={ContextExample} />
+				<Route path='/hooks' component={HoosExample} />
 			</div>
 		</Router>
 	);
