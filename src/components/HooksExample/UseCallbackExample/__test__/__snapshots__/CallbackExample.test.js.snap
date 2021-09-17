@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1 1`] = `
+<div>
+  <span>
+    0
+  </span>
+  <button
+    onClick={[Function]}
+  >
+    Memo
+  </button>
+  <span
+    data-testid="testLabel"
+  >
+    Hi 
+    test1
+  </span>
+</div>
+`;
+
+exports[`matches snapshot 2 1`] = `
+<div>
+  <span>
+    0
+  </span>
+  <button
+    onClick={[Function]}
+  >
+    Memo
+  </button>
+  <span
+    data-testid="testLabel"
+  >
+    Hi 
+    test2
+  </span>
+</div>
+`;
